@@ -15,9 +15,12 @@ export const Header = () => {
                 </div>
             </div>
             <div className="py-5">
-                <div className="container mx-auto">
+                <div className="container">
                     <div className="flex items-center justify-between">
-                        <Image src={Logo} alt="mon_logo" height={45} width={45} />
+                        <div className="flex items-center">
+                        <Image src={Logo} alt="mon_logo" height={40} width={40} />
+                        <h1 className="text-sm mx-1 sm:mx-2 sm:text-xl font-extrabold">WINICHANGE</h1>
+                        </div>
                         <IoMenu className="h-5 w-5 md:hidden"/>
                         <nav className="hidden md:flex gap-6 text-black/60 items-center">
                             <a href="#">À propos</a>
