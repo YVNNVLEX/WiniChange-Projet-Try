@@ -6,7 +6,7 @@ import { IoMenu } from "react-icons/io5";
 
 export const Header = () => {
     return (
-        <header className="sticky top-0">
+        <header>
             <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
              <p className="text-white/60 hidden md:block">Échangez vos cryptomonnaies facilement et en toute sécurité</p>
                 <div className="inline-flex gap-1 items-center">
