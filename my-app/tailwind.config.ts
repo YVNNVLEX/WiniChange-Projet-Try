@@ -20,6 +20,13 @@ const config: Config = {
           lg: "80px",
         },
       },
+      backgroundImage: {
+        "conic-gradient":
+          "conic-gradient(from 225deg, #00FF00, #d35400, #FFCC00, #2980b9, #00FF00)",
+      },
+      stroke: {
+        1: "#26242C",
+      },
       
     },
   },

@@ -23,12 +23,15 @@ export const Header = () => {
                         </div>
                         <IoMenu className="h-5 w-5 md:hidden"/>
                         <nav className="hidden md:flex gap-6 text-black/60 items-center">
-                            <a href="#">À propos</a>
-                            <a href="#">Nos moyens d'échanges</a>
-                            <a href="#">FAQ</a>
-                            <a href="#">Support</a>
+                           <div className="lg:flex hidden gap-6">
+                             <a href="#">Nos moyens d'échanges</a>
+                                <a href="#">Nos tarifs</a>
+                                <a href="#">Support</a>
+                                <a href="#">FAQ</a>
+                           </div>
+                            <a href="#">Connexion</a>
                             <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex justify-center align-items tracking-tight">
-                                S'inscrire
+                                Inscription
                             </button>
                         </nav>
                     </div>
