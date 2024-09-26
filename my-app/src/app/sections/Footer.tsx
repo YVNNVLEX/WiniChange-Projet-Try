@@ -45,7 +45,7 @@ const Footer = () => {
   return (
     <footer className='py-5 bg-black text-white/60 border-t border-white/20'>
       <div className='container'>
-        <div className='flex flex-col items-center gap-4 sm:flex-row sm:justify-between'>
+        <div className='flex flex-col items-center gap-4 md:flex-row md:justify-between'>
           <div className='text-center'>
             ©2024 WiniChange. All rights reserved
           </div>
