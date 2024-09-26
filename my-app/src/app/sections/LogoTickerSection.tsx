@@ -30,7 +30,7 @@ export const LogoTickerSection = () => {
        <div className="flex overflow-hidden before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative before:right-0 after:left-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right, #000, rgba(0,0,0,0))] after:bg-[linear-gradient(to_left, #000, rgba(0,0,0,0))]">
        <motion.div
        transition={{
-        duration: 10,
+        duration: 20,
         ease: "linear",
         repeat: Infinity,
        }}
