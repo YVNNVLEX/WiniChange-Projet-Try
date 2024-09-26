@@ -3,8 +3,12 @@
 import Image from "next/image"
 import ExchangeIcon from '@/app/assets/cursor.png'
 import { motion } from 'framer-motion'
+import { useMediaQuery } from 'react-responsive';
+
 
 export const Hero = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
     return (
         <div className="bg-black text-white bg-hero-gradient relative overflow-clip py-[72px] sm:py-26">
              <div className="absolute h-[375px] w-[750px] md:w-[1536px] md:h-[768px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border
@@ -13,7 +17,19 @@ export const Hero = () => {
             <div className="container relative">
                 <div className="flex justify-center">
                     <div className="inline-flex relative">
-                     <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-center mt-4 inline-flex">L'avenir des transferts d'argent,<br /> sans frontières</h1>
+                    {isMobile ?(<motion.h1
+                            className="text-6xl md:text-8xl font-bold tracking-tighter text-center mt-4 inline-flex"
+                            initial={{ opacity: 0, y: 50 }} 
+                            animate={{ opacity: 1, y: 0 }}    
+                            transition={{ duration: 1.2, ease: "easeOut" }}  
+                        >
+                            L'avenir des transferts d'argent,<br /> sans frontières
+                        </motion.h1>
+                    ) : (
+                        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-center mt-4 inline-flex">
+                            L'avenir des transferts d'argent,<br /> sans frontières
+                        </h1>
+                    )}
                      <motion.div
                       className="absolute left-[40px] top-[160px] hidden md:inline"
                       drag
