@@ -40,7 +40,7 @@ export const Header = () => {
                         <IoMenu className="h-8 w-8 md:hidden cursor-pointer" onClick={toggleMenu} />
                         <nav className="hidden md:flex gap-6 text-black/60 items-center">
                             <div className="lg:flex hidden gap-6">
-                                <a href="#">Nos moyens d'échanges</a>
+                                <a href="#echange">Nos moyens d'échanges</a>
                                 <a href="#">Nos tarifs</a>
                                 <a href="#">Support</a>
                                 <a href="#">FAQ</a>
@@ -54,15 +54,15 @@ export const Header = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center text-white">
-                    <IoClose className="h-8 w-8 cursor-pointer absolute top-5 right-5" onClick={toggleMenu} />
-                    <nav className="flex items-center flex-col gap-6 text-lg">
-                        <a href="#" className="hover:text-gray-300">Nos moyens d'échanges</a>
+                <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center text-white/70">
+                    <IoClose className="h-8 w-8 cursor-pointer absolute top-16 right-10" onClick={toggleMenu} />
+                    <nav className="flex items-center flex-col gap-6 text-2xl font-bold">
+                        <a href="#echange" className="hover:text-gray-300">Nos moyens d'échanges</a>
                         <a href="#" className="hover:text-gray-300">Nos tarifs</a>
                         <a href="#" className="hover:text-gray-300">Support</a>
                         <a href="#" className="hover:text-gray-300">FAQ</a>
                         <a href="#" className="hover:text-gray-300">Connexion</a>
-                        <button className="bg-white text-black px-4 py-2 rounded-lg font-medium inline-flex justify-center align-items tracking-tight">
+                        <button className="bg-white text-black px-10 py-2 rounded-lg font-medium inline-flex justify-center align-items tracking-tight">
                             Inscription
                         </button>
                     </nav>

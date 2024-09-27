@@ -97,7 +97,7 @@ const winichangeApps = [
 const SolutionsProposees = () => {
   return (
     <div
-      id="solutionsProposees"
+      id="#echange"
       className="
         relative
         py-10 xl:py-20 
