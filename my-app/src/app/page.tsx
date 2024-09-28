@@ -3,12 +3,12 @@ import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
 import { LogoTickerSection } from "./sections/LogoTickerSection";
 import { Features } from "./sections/Features";
-import Testimonials from "./sections/Testimonials";
 import AppSection from "./sections/AppSection";
 import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import FloatingButtons from "./components/FloatingCompoAndGoUp";
 import SolutionsProposees from "./sections/NosSolutionsProposees";
+import TestimonialsSection from "./sections/Testimonialss";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
     <LogoTickerSection/>
     <Features />
     <SolutionsProposees/>
-    <Testimonials/>
+    <TestimonialsSection/>
     <AppSection />
     <Faq/>
     <Footer />

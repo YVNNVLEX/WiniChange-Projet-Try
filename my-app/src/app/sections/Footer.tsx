@@ -44,12 +44,14 @@ const Footer = () => {
   return (
     <footer className='py-5 bg-black text-white/60 border-t border-white/20'>
       <div className='container'>
-         {/* Contact Section */}
          <div className='flex flex-col items-center gap-4 mt-6 md:flex-row md:justify-between'>
-          {/* Email and Phone */}
           <div className='text-center md:text-left'>
-            <p className='text-white/60'>Email: info@winichange.com</p>
-            <p className='text-white/60'>Tel: +2250102528848</p>
+            <p className='text-white/60'>Email: contact@winichange.com</p>
+            <p className='text-white/60'>Tel: +123 456 7890</p>
+          </div>
+          <div className='text-center md:text-right flex gap-4'>
+            <a href='' className='text-white/60'>Devenir Partenaire</a>
+            <a href="" className='text-white/60'>Telecharger l'APP</a>
           </div>
         </div>
         <div className='flex flex-col items-center gap-4 md:flex-row md:justify-between'>
@@ -92,7 +94,7 @@ const Footer = () => {
                           key={social.name}
                           src={social.image}
                           alt={social.name}
-                          className="size-16"
+                          className="size-10"
                           initial={{
                             y: -40,
                             rotate: rotation,
