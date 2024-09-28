@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
@@ -35,36 +35,41 @@ export const Header = () => {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
                             <Image src={Logo} alt="mon_logo" height={40} width={40} />
-                            <h1 className="text-sm mx-1 sm:mx-2 sm:text-xl font-extrabold">WINICHANGE</h1>
+                            <h1 className="text-sm mx-1 sm:mx-2 sm:text-xl font-extrabold hidden lg:flex">WINICHANGE</h1>
                         </div>
-                        <IoMenu className="h-8 w-8 md:hidden cursor-pointer" onClick={toggleMenu} />
-                        <nav className="hidden md:flex gap-6 text-black/60 items-center">
-                            <div className="lg:flex hidden gap-6">
-                                <a href="#echange">Nos moyens d'échanges</a>
-                                <a href="#">Nos tarifs</a>
-                                <a href="#">Support</a>
-                                <a href="#">FAQ</a>
+                        <nav className="hidden md:flex items-center gap-4 flex-1 justify-between px-4">
+                            <div className="flex space-x-4">
+                                <a href="#" className="text-gray-700 hover:text-black transition duration-300">A propos</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition duration-300">Services</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition duration-300">Moyens de changes</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition duration-300">Nos tarifs</a>
                             </div>
+                            <div className="flex space-x-4">
+                                <a href="#" className="text-gray-700 hover:text-black transition duration-300">Support</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition duration-300">FAQ</a>
+                            </div>
+                        </nav>
+                        <div className="flex gap-4 items-center justify-center">
                             <a href="#">Connexion</a>
                             <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex justify-center align-items tracking-tight">
                                 Inscription
                             </button>
-                        </nav>
+                        </div>
+                        <IoMenu className="h-8 w-8 md:hidden cursor-pointer" onClick={toggleMenu} />
+
                     </div>
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center text-white/70">
-                    <IoClose className="h-8 w-8 cursor-pointer absolute top-16 right-10" onClick={toggleMenu} />
-                    <nav className="flex items-center flex-col gap-6 text-2xl font-bold">
-                        <a href="#echange" className="hover:text-gray-300">Nos moyens d'échanges</a>
+                <div className="fixed inset-0 bg-black uppercase font-light z-50 flex flex-col items-center justify-center text-white">
+                    <IoClose className="h-8 w-8 cursor-pointer absolute top-5 right-5" onClick={toggleMenu} />
+                    <nav className="flex flex-col gap-6 text-lg">
+                        <a href="#" className="hover:text-gray-300">A propos</a>
+                        <a href="#" className="hover:text-gray-300">Services</a>
+                        <a href="#" className="hover:text-gray-300">Moyens de changes</a>
                         <a href="#" className="hover:text-gray-300">Nos tarifs</a>
                         <a href="#" className="hover:text-gray-300">Support</a>
                         <a href="#" className="hover:text-gray-300">FAQ</a>
-                        <a href="#" className="hover:text-gray-300">Connexion</a>
-                        <button className="bg-white text-black px-10 py-2 rounded-lg font-medium inline-flex justify-center align-items tracking-tight">
-                            Inscription
-                        </button>
                     </nav>
                 </div>
             )}
