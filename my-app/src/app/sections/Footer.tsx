@@ -1,9 +1,8 @@
-'use client'
+'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
-import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
@@ -45,6 +44,14 @@ const Footer = () => {
   return (
     <footer className='py-5 bg-black text-white/60 border-t border-white/20'>
       <div className='container'>
+         {/* Contact Section */}
+         <div className='flex flex-col items-center gap-4 mt-6 md:flex-row md:justify-between'>
+          {/* Email and Phone */}
+          <div className='text-center md:text-left'>
+            <p className='text-white/60'>Email: info@winichange.com</p>
+            <p className='text-white/60'>Tel: +2250102528848</p>
+          </div>
+        </div>
         <div className='flex flex-col items-center gap-4 md:flex-row md:justify-between'>
           <div className='text-center'>
             ©2024 WiniChange. All rights reserved
@@ -104,6 +111,7 @@ const Footer = () => {
             )}
           </ul>
         </div>
+
       </div>
     </footer>
   );
