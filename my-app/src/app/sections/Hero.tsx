@@ -10,7 +10,7 @@ export const Hero = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
     return (
-        <div className="bg-black text-white bg-hero-gradient relative overflow-clip py-[72px] sm:py-26">
+        <div className="bg-black text-white bg-hero-gradient relative overflow-clip py-[72px] sm:py-26 pt-48">
              <div className="absolute h-[375px] w-[750px] md:w-[1536px] md:h-[768px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border
               border-purple-400 bg-[radial-gradient(closest-side,#000_82%,#4CAF)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]">
             </div>
