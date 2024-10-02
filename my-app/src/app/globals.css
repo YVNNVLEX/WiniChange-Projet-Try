@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   scroll-behavior: smooth;
+  background-color: black
 
 }
 
@@ -105,6 +107,8 @@
   overflow: hidden;
 }
 
-
+.custom-width {
+  width: calc(100% - 10rem);
+}
 
 
