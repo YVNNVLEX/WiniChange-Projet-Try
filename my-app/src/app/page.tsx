@@ -9,6 +9,7 @@ import Footer from "./sections/Footer";
 import FloatingButtons from "./components/FloatingCompoAndGoUp";
 import SolutionsProposees from "./sections/NosSolutionsProposees";
 import TestimonialsSection from "./sections/Testimonialss";
+import SupportSection from "./sections/SupportSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
     <SolutionsProposees/>
     <TestimonialsSection/>
     <AppSection />
+    <SupportSection/>
     <Faq/>
     <Footer />
    </>

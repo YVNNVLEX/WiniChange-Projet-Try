@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto block lg:flex">
         <div className="relative z-2 mr-20 flex-1 mb-10 max-md:mb-5"> 
           <p className="mb-5 text-xl text-white/60">Mur de témoignages</p>
-          <h3 className="text-4xl md:text-5xl font-bold mb-10">Ce que disent nos utilisateurs</h3>
+          <h3 className="text-5xl md:text-6xl font-bold mb-10">Ce que disent nos utilisateurs</h3>
         </div>
         
         <div className="relative flex flex-col md:flex-row"> 

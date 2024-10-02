@@ -4,7 +4,7 @@ const TestimonialItem = ({ item, containerClassName }) => {
   return (
     <div
       className={clsx(
-        "relative px-14 pb-14 pt-11 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-[150%] after:bg-white/60 after:content-[''] max-md:px-6 max-md:pb-10 max-md:pt-8 after:max-md:-right-4 max-sm:px-4 max-sm:pb-8 max-sm:pt-6",
+        "relative px-14 pb-14 pt-11 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-[150%] sm:after:w-[110%] after:bg-white/60 after:content-[''] max-md:px-6 max-md:pb-10 max-md:pt-8 after:max-md:-right-4 max-sm:px-4 max-sm:pb-8 max-sm:pt-6",
         containerClassName
       )}
     >

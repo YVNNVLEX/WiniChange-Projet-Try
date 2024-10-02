@@ -9,21 +9,21 @@ export const testimonials = [
   {
     id: "1",
     name: "Ngbohisse Mireille",
-    avatarUrl: "/testimonials/testi1.jpg",
+    avatarUrl: "/testimonials/business-femme.jpg",
     comment:
       "J'étais sceptique au début, mais maintenant je ne peux plus imaginer nos opérations sans Winichange. C'est vraiment révolutionnaire.",
   },
   {
     id: "2",
     name: "Melanie Konan",
-    avatarUrl: "/testimonials/testi1.jpg",
+    avatarUrl: "/testimonials/business-femme.jpg",
     comment:
       "Adopter cette solution a été un jeu d'enfant. Cela a simplifié nos tâches quotidiennes de façon incroyable.",
   },
   {
     id: "3",
     name: "John Kay",
-    avatarUrl:"/testimonials/testi1.jpg",
+    avatarUrl:"/testimonials/portrait-father-his-backyard.jpg",
     comment:
       "La fonction d'analyse est comme avoir un devin personnel. Elle a joué un rôle clé dans nos décisions commerciales.",
   },
@@ -37,7 +37,7 @@ export const testimonials = [
   {
     id: "5",
     name: "Arouna Ouattara",
-    avatarUrl: "/testimonials/testi1.jpg",
+    avatarUrl: "/testimonials/vertical.jpg",
     comment:
       "Le gain d'efficacité est indéniable. Cette plateforme a transformé notre flux de travail pour toujours.",
   },
