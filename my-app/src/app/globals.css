@@ -5,7 +5,7 @@
 
 :root {
   scroll-behavior: smooth;
-  background-color: black
+  background-color: #000000
 
 }
 
@@ -31,7 +31,7 @@
     to bottom,
     rgba(0, 0, 0, 0.9),  
     rgba(0, 0, 0, 0.6), 
-    rgba(31, 198, 109, 0.272), 
+    #126e51, 
     rgba(76, 175, 80, 0.2), 
     rgba(0, 0, 0, 0.6), 
     rgba(0, 0, 0, 0.9) 
