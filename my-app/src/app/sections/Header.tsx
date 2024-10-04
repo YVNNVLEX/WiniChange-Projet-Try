@@ -58,7 +58,7 @@ export const Header = () => {
             <div className={ `md:container w-full  py-2 md:px-4  mt-2 font-semibold transition-colors duration-300 ${isScrolled ? 'bg-white bg-opacity-60 backdrop-blur-lg' : 'bg-gradient-to-l from-white to-green-200 bg-opacity-30 backdrop-blur-lg border-b border-white '} rounded-[1.8rem]`}>
                 <div className="mx-auto flex items-center justify-between px-4">
                     <div className="flex items-center cur">
-                        <Image src={LogoDesktop} alt="mon_logo_desktop"  className="flex" height={160} width={160} />
+                        <Image src={LogoDesktop} alt="mon_logo_desktop"  className="flex" height={200} width={200} />
                     </div>
                     <nav className="hidden lg:flex space-x-8">
                         <a href="#" className="text-gray-700 hover:text-black transition duration-300">A propos</a>
