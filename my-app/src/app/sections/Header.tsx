@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import { TbExchange } from "react-icons/tb";
 import Logo from '@/app/assets/logo.png';
+import LogoDesktop from '@/app/assets/log1.png'
 import { IoMenu, IoClose } from "react-icons/io5";
 import { IoLogoAndroid, IoLogoApple } from "react-icons/io5";
 import { FaTelegram } from 'react-icons/fa';
@@ -57,8 +58,8 @@ export const Header = () => {
             <div className={ `md:container w-full  py-2 md:px-4  mt-2 font-semibold transition-colors duration-300 ${isScrolled ? 'bg-white bg-opacity-60 backdrop-blur-lg' : 'bg-gradient-to-l from-white to-green-200 bg-opacity-30 backdrop-blur-lg border-b border-white '} rounded-[1.8rem]`}>
                 <div className="mx-auto flex items-center justify-between px-4">
                     <div className="flex items-center cur">
-                        <Image src={Logo} alt="mon_logo" height={45} width={45} />
-                        <h1 className="mx-1 sm:mx-2 sm:text-xl font-extrabold hidden lg:block">WINICHANGE</h1>
+                        <Image src={Logo} alt="mon_logo" height={45} width={45} className='flex md:hidden'/>
+                        <Image src={LogoDesktop} alt="mon_logo_desktop"  className="hidden md:flex" height={180} width={180} />
                     </div>
                     <nav className="hidden lg:flex space-x-8">
                         <a href="#" className="text-gray-700 hover:text-black transition duration-300">A propos</a>
