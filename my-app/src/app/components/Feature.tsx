@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion'
+import Image from "next/image";
 
 export const Feature = ({ title, description, icon: Icon }: { title: string; description: string; icon: any }) => {
     const offsetX = useMotionValue(0);
@@ -40,7 +41,7 @@ export const Feature = ({ title, description, icon: Icon }: { title: string; des
          className="border border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1 relative"
         >  
             <motion.div
-                className="absolute inset-0 border-2 border-purple-400 rounded-lg" 
+                className="absolute inset-0 border-2 border-[#126e51] rounded-lg" 
                 style={{
                     WebkitMaskImage: maskImage,
                     maskImage 
@@ -48,8 +49,8 @@ export const Feature = ({ title, description, icon: Icon }: { title: string; des
                 ref={border}
             >
             </motion.div>
-            <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-                <Icon size="1.5em" />
+            <div className="inline-flex h-16 w-16 bg-white text-black justify-center items-center rounded-lg">
+              <Image src={Icon.src} alt={title} className="feature-icon" width={100} height={100} priority/>
             </div>
             <h3 className="mt-6 font-bold">{title}</h3>
             <div className="max-w-xl mx-auto">

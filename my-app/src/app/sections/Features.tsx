@@ -1,29 +1,33 @@
 'use client'
 
-import { FaMoneyBillWave, FaExchangeAlt, FaRocket, FaMobileAlt, FaShieldAlt } from 'react-icons/fa';
-import { Feature } from '../components/Feature';
+import Interoperabilite from '@/app/assets/Features/interoperabilite.webp'
+import FraisCompetif from '@/app/assets/Features/fraisCompetitif.webp'
+import Securise from '@/app/assets/Features/securise.webp'
+import Vitesse from '@/app/assets/Features/vitesse.webp'
+import { Feature } from '../components/Feature'
+
 
 export const Features = () => {
     const features = [
         {
-            title : 'Frais compétitifs',
+            title: 'Frais compétitifs',
             description: "Bénéficiez des taux parmi les plus bas du marché pour vos transferts d'argent, sans frais cachés",
-            icon: FaMoneyBillWave 
+            icon: FraisCompetif
         },
         {
-            title : 'Interopérabilité mondiale',
+            title: 'Interopérabilité mondiale',
             description: "Reliez vos cryptomonnaies aux services bancaires et de mobile money partout dans le monde, facilement et rapidement",
-            icon: FaExchangeAlt  
+            icon: Interoperabilite
         },
         {
-            title : 'Vitesse de transaction ultra rapide',
+            title: 'Vitesse de transaction ultra rapide',
             description: "Profitez de transferts d'argent quasi instantanés, où que vous soyez",
-            icon: FaRocket 
+            icon: Vitesse
         },
         {
-            title : 'Transfert sécurisé',
+            title: 'Transfert sécurisé',
             description: "Nous assurons la sécurité de vos transactions afin qu'elles aboutissent à temps !",
-            icon: FaShieldAlt
+            icon: Securise 
         },
     ];
 

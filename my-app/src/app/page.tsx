@@ -10,7 +10,6 @@ import FloatingButtons from "./components/FloatingCompoAndGoUp";
 import SolutionsProposees from "./sections/NosSolutionsProposees";
 import TestimonialsSection from "./sections/Testimonialss";
 import SupportSection from "./sections/SupportSection";
-import CoverCountry from "./sections/CoverCountry";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
     <Header/>
     <Hero/>
     <LogoTickerSection/>
-    <CoverCountry />
     <Features />
     <SolutionsProposees/>
     <TestimonialsSection/>
