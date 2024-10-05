@@ -38,10 +38,10 @@ export const Feature = ({ title, description, icon: Icon }: { title: string; des
 
     return (
         <div key={title} 
-         className="border border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1 relative"
+         className="border border-[#126e51] px-5 py-10 text-center rounded-xl sm:flex-1 relative"
         >  
             <motion.div
-                className="absolute inset-0 border-2 border-[#126e51] rounded-lg" 
+                className="absolute inset-0 border-4 border-white rounded-lg" 
                 style={{
                     WebkitMaskImage: maskImage,
                     maskImage 
