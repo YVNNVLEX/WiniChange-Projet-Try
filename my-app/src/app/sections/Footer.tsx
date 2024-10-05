@@ -8,14 +8,14 @@ import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer className='bg-gradient-to-tl from-[#126e51]  to-black pt-14 pb-2 rounded-t-[1rem] md:rounded-t-[4rem]'>
-        <div className="w-full px-2 container  text-white rounded-lg" id="footerCustom py-14">
-          <div className="flex flex-col md:flex-row justify-between p-4">
+        <div className="w-full px-2 md:container text-white rounded-lg" id="footerCustom py-14">
+          <div className="flex flex-col md:flex-row justify-between p-4 flex-wrap">
             <div className="flex flex-col items-start mb-8 space-y-2">
               <div className="w-full h-full mb-4 flex items-center md:justify-center">
                 <Image src={Logo.src} alt="Logo" width={30} height={30} className='cursor-pointer'/>
                 <h1 className='text-xl text-white font-bold mx-2'>WiniChange</h1>
               </div>
-              <div className="mb-4">
+              <div className="mb-4 mt-8">
                 <h5 className="text-xl text-white font-bold ">Contactez-Nous</h5>
                 <div className="mt-2 text-white/80">
                   <a href="tel:+2250102528848" className="text-white flex items-center mb-4">
