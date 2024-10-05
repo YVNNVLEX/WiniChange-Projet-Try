@@ -57,7 +57,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="p-6 rounded-lg"
+            className="p-6 rounded-lg shadow-lg border"
             style={{
               backgroundColor: testimonial.bgColor,
               borderColor: testimonial.color,
@@ -86,7 +86,7 @@ const Testimonials = () => {
               <p className="font-bold" style={{ color: testimonial.color }}>
                 {testimonial.name}
               </p>
-              <span className="mx-1">•</span>
+              <span className="mx-1 text-white">•</span>
               <p className="font-bold" style={{ color: testimonial.color }}>
                 {testimonial.location}
               </p>

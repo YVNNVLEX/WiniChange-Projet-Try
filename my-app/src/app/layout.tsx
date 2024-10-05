@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge"
 
-const dmSans = DM_Sans({ subsets: ['latin']});
+const poppins = Poppins({ subsets: ['latin'], weight:[ '400', '600', '800', '900']});
 
 export const metadata: Metadata = {
   title: "WiniChange - Official Website",
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="relative">
       <body
-        className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}
+        className={twMerge(poppins.className, "antialiased bg-[#EAEEFE]")}
       >
         {children}
       </body>

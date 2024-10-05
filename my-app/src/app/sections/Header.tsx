@@ -64,14 +64,14 @@ export const Header = () => {
                         <a href="#" className="text-gray-700 hover:text-black transition duration-300">A propos</a>
                         <a href="#" className="text-gray-700 hover:text-black transition duration-300">Services</a>
                         <a href="#" className="text-gray-700 hover:text-black transition duration-300">Blog</a>
-                        <a href="#" className="text-gray-700 hover:text-black transition duration-300">FAQ</a>
+                        <a href="#" className="text-gray-700 hover:text-black transition duration-300">Devenir partenaire</a>
                     </nav>
                     <div className="flex items-center space-x-4">
                        <div className='hidden md:flex'>
                         <LanguageSwitcher/>
                        </div>
                         <a href="#" className='rounded-xl bg-black text-white px-4 py-2 text-sm'>Connexion</a>
-                        <button className="hidden md:inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Devenir partenaire</button>
+                        <button className="hidden md:inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Inscription</button>
                         {isMenuOpen ? (
                           <IoClose onClick={toggleMenu} className={`h-7 w-7 lg:hidden cursor-pointer transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : 'rotate-0'}` }/>
                         ) : (
@@ -86,12 +86,12 @@ export const Header = () => {
                         <a href="#" >A propos</a>
                         <a href="#" >Services</a>
                         <a href="#" >Blog</a>
-                        <a href="#" >FAQ</a>
+                        <a href="#" >Devenir Partenaire</a>
                     </nav>
                     <hr className='w-full border-b-1 border-gray-300 mt-4'/>
                     <div className="flex items-center space-x-4 my-4">
                         <a href="#" className='rounded-xl bg-black text-white px-4 py-2 text-sm'>Se connecter</a>
-                        <button className="inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Devenir partenaire</button>
+                        <button className="inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Inscription</button>
                     </div>
                     <div className='flex mt-3'>
                        <LanguageSwitcher/>
