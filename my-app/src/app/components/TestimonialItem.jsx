@@ -13,7 +13,7 @@ const TestimonialItem = ({ item, containerClassName }) => {
       </blockquote>
 
       <div className="flex items-center">
-        <div className="mr-4 size-20 shrink-0 rounded-full border-2 border-purple-200 p-1.5 max-md:size-16 max-sm:size-12">
+        <div className="mr-4 size-20 shrink-0 rounded-full border-2 border-green-200 p-1.5 max-md:size-16 max-sm:size-12">
           <img
             src={item.avatarUrl}
             alt={item.name}

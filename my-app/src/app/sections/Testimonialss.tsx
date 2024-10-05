@@ -48,29 +48,29 @@ const Testimonials = () => {
   return (
     <div className='bg-black w-full'>
         <div className="container mx-auto py-10">
-      <div className="text-center mb-14">
+      <div className="text-center md-14 md:mb-24">
         <h2 className="text-5xl md:text-6xl font-bold text-white">
           Nos clients satisfaits 
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {testimonials.map((testimonial) => (
+      <div className="mt-20 md:mt-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
-            className="p-6 rounded-lg shadow-lg border"
+            className={`relative p-6 rounded-3xl shadow-lg border-2 bg-gray-200 mb-14 ${index % 2 ===0 ? 'md:mt-10': 'md:mb-16'}`}
+
             style={{
-              backgroundColor: testimonial.bgColor,
               borderColor: testimonial.color,
             }}
           >
             <div className="flex items-center mb-4">
-              <div className="w-16 h-16 overflow-hidden rounded-full">
+              <div className="w-16 h-16 overflow-hidden rounded-full absolute top-[-2rem]">
                 <Image
                   src={testimonial.image}
                   alt={`Client ${testimonial.name}`}
                   width={64}
                   height={64}
-                  className="object-cover bg-red-200"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -86,7 +86,7 @@ const Testimonials = () => {
               <p className="font-bold" style={{ color: testimonial.color }}>
                 {testimonial.name}
               </p>
-              <span className="mx-1 text-white">•</span>
+              <span className="mx-1 text-black">•</span>
               <p className="font-bold" style={{ color: testimonial.color }}>
                 {testimonial.location}
               </p>
