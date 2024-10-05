@@ -28,23 +28,23 @@ const steps = [
 export default function HowItWorks() {
   const [selectedStep, setSelectedStep] = useState<number>(1);
 
-  const handleSwipe = (direction: number) => {
-    if (direction === 1 && selectedStep < steps.length) {
-      setSelectedStep(selectedStep + 1); 
-    } else if (direction === -1 && selectedStep > 1) {
-      setSelectedStep(selectedStep - 1); 
-    }
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedStep((prevStep) => (prevStep === steps.length ? 1 : prevStep + 1));
-    }, 7000); 
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, []);
 
   const selectedContent = steps.find((step) => step.id === selectedStep);
+
+  const handleSwipe = (direction: number) => {
+    if (direction === 1 && selectedStep < steps.length) {
+      setSelectedStep(selectedStep + 1);
+    } else if (direction === -1 && selectedStep > 1) {
+      setSelectedStep(selectedStep - 1);
+    }
+  };
 
   return (
     <div className="bg-black text-white py-12">
@@ -53,35 +53,27 @@ export default function HowItWorks() {
 
         {/* Mobile Section */}
         <div className="md:hidden mt-10 md:mt-20 flex flex-col items-center justify-center">
-        <motion.div
-          className="relative mb-6 w-full max-w-md flex justify-center items-center"
-          key={selectedContent?.id}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 30 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-teal-500 to-green-400 rounded-full w-80 h-80 opacity-30 blur-lg z-0"></div>
-          {selectedContent && (
-            <Image
-              src={selectedContent.image}
-              alt={selectedContent.title}
-              width={400}
-              height={300}
-              className="relative z-10 rounded-lg shadow-2xl"
-            />
-          )}
-        </motion.div>
-
+          <div className="relative mb-6 w-full max-w-md flex justify-center items-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-teal-500 to-green-400 rounded-full w-80 h-80 opacity-30 blur-lg z-0"></div>
+            {selectedContent && (
+              <Image
+                src={selectedContent.image}
+                alt={selectedContent.title}
+                width={400}
+                height={300}
+                className="relative z-10 rounded-lg shadow-2xl"
+              />
+            )}
+          </div>
           <motion.div
             className="p-4 bg-[#126e51] w-full max-w-md rounded-lg shadow-md cursor-pointer"
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
-            onDragEnd={(e, { offset, velocity }) => {
+            onDragEnd={(e, { offset }) => {
               if (offset.x > 100) {
                 handleSwipe(-1); 
               } else if (offset.x < -100) {
-                handleSwipe(1);
+                handleSwipe(1);  
               }
             }}
           >
@@ -96,6 +88,7 @@ export default function HowItWorks() {
             ))}
           </motion.div>
         </div>
+
         {/* Desktop Section */}
         <div className="hidden md:grid grid-cols-2 gap-8 items-center mt-20">
           <div className="flex flex-col space-y-6">
