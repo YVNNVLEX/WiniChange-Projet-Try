@@ -45,13 +45,13 @@ export const Header = () => {
     return (
         <header className="fixed top-0 w-full z-50">
             <div className="md:container flex items-center text-center justify-center gap-2 w-full md:px-10 font-semibold px-0">
-                <a href="#" className="flex items-center  justify-center gap-2 uppercase flex-1 h-[2rem] py-2 bg-black border-white border-l-2 border-b-2 rounded-b-3xl text-white hover:text-teal-600 transition duration-300 ease-in-out transform hover:scale-x-90">
-                    <FaTelegram className="w-5 h-5" />
-                    <div className='hidden md:block'>PartnerShip</div>
+                <a href="#" className="flex items-center  justify-center gap-2 uppercase flex-1 h-[2rem] py-2   bg-white border-[#126e51]  border-l-2 md:border-l-4 border-b-2 md:border-b-4 rounded-b-3xl hover:text-teal-600 transition duration-300 ease-in-out transform hover:scale-x-90">
+                    <IoLogoApple className="w-5 h-5 text-[#126e51]" />
+                    <div className='hidden md:block text-black'>Application IOS</div>
                 </a>
-                <a href="#" className="flex items-center justify-center gap-2 uppercase flex-1 h-[2rem] bg-black border-white border-l-2 border-b-2 rounded-b-3xl text-white hover:text-teal-600 transition duration-300 ease-in-out transform hover:scale-x-90">
-                    <IoLogoAndroid className="w-5 h-5" />
-                    <div className='hidden md:block'>Application Android</div>
+                <a href="#" className="flex items-center justify-center gap-2 uppercase  flex-1 h-[2rem] bg-white border-[#126e51] border-l-2 md:border-l-4 border-b-2 md:border-b-4 rounded-b-3xl hover:text-teal-600 transition duration-300 ease-in-out transform hover:scale-x-90">
+                    <IoLogoAndroid className="w-5 h-5 text-[#126e51]"/>
+                    <div className='hidden md:block text-black'>Application Android</div>
                 </a>
             </div>
 
@@ -61,28 +61,28 @@ export const Header = () => {
                         <Image src={LogoDesktop} alt="mon_logo_desktop"  className="flex" height={190} width={190}  />
                     </div>
                     <nav className="hidden lg:flex space-x-8">
-                        <a href="#" className="text-gray-700 hover:text-black transition duration-300">A propos</a>
-                        <a href="#" className="text-gray-700 hover:text-black transition duration-300">Services</a>
-                        <a href="#" className="text-gray-700 hover:text-black transition duration-300">Blog</a>
-                        <a href="#" className="text-gray-700 hover:text-black transition duration-300">Devenir partenaire</a>
+                        <a href="#" className="text-gray-800 hover:text-black transition duration-300">A propos</a>
+                        <a href="#" className="text-gray-800 hover:text-black transition duration-300">Services</a>
+                        <a href="#" className="text-gray-800 hover:text-black transition duration-300">Blog</a>
+                        <a href="#" className="text-gray-800 hover:text-black transition duration-300">Devenir partenaire</a>
                     </nav>
                     <div className="flex items-center space-x-4">
                        <div className='hidden md:flex'>
                         <LanguageSwitcher/>
                        </div>
-                        <a href="#" className='rounded-xl bg-black text-white px-4 py-2 text-sm'>Connexion</a>
+                        <a href="#" className='rounded-xl bg-[#126e51] text-white px-4 py-2 text-sm'>Connexion</a>
                         <button className="hidden md:inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Inscription</button>
                         {isMenuOpen ? (
-                          <IoClose onClick={toggleMenu} className={`h-7 w-7 lg:hidden cursor-pointer transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : 'rotate-0'}` }/>
+                          <IoClose onClick={toggleMenu} className={`h-7 w-7 text-[#126e51] lg:hidden cursor-pointer transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : 'rotate-0'}` }/>
                         ) : (
-                            <IoMenu onClick={toggleMenu} className={`h-7 w-7 lg:hidden cursor-pointer transition-transform duration-300  ${isMenuOpen ? 'rotate-0' : 'rotate-180'}` } />
+                            <IoMenu onClick={toggleMenu} className={`h-7 w-7 text-[#126e51] lg:hidden cursor-pointer transition-transform duration-300  ${isMenuOpen ? 'rotate-0' : 'rotate-180'}` } />
                         )}
                     </div>
                 </div>
             </div>
             {isMenuOpen && (
                 <div className="md:container md:px-10 my-2 py-5 rounded-[1.8rem] inset-0 bg-white font-semibold flex flex-col items-start px-4 justify-center lg:hidden">
-                    <nav className="flex flex-col items-start space-y-4 text-gray-700 text-xl">
+                    <nav className="flex flex-col items-start space-y-4 text-gray-800 text-xl">
                         <a href="#" >A propos</a>
                         <a href="#" >Services</a>
                         <a href="#" >Blog</a>
