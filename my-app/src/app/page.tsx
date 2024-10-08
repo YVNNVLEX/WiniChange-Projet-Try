@@ -3,7 +3,7 @@ import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
 import { LogoTickerSection } from "./sections/LogoTickerSection";
 import { Features } from "./sections/Features";
-import AppSection from "./sections/HowItWork";
+import HowItWorks from "./sections/HowItWork";
 import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import FloatingButtons from "./components/FloatingCompoAndGoUp";
@@ -19,9 +19,9 @@ export default function Home() {
     <Hero/>
     <LogoTickerSection/>
     <Features />
-    <SolutionsProposees/>
+    {/*<SolutionsProposees/>*/}
+    <HowItWorks />
     <TestimonialsSection/>
-    <AppSection />
     <SupportSection/>
     {/*<Faq/>*/}
     <Footer />

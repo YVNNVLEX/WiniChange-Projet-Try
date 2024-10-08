@@ -1,49 +1,10 @@
+import React from 'react';
 import Image from 'next/image';
+import { testimonials } from '@/constants/testimonials';
+import MobileTestimonialsComponent from '../components/MobileTestimonialsComponent';
+
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Mireille Ahoua",
-      location: "CIV",
-      image: "/testimonials/vertical.jpg",
-      testimonial:
-        "J'utilise Winichange depuis près de 2 ans, et les transactions de vente et d'achat de cryptomonnaies y sont automatiques.",
-      color: "#356169",
-      bgColor: "#3561691d",
-    },
-    {
-      id: 2,
-      name: "Aminata KONE",
-      location: "Mali",
-      image: "/testimonials/vertical.jpg",
-      testimonial:
-        "Winichange est la meilleure plateforme pour acheter et vendre des cryptomonnaies, non seulement en Afrique mais dans le monde entier.",
-      color: "#DC3F4D",
-      bgColor: "#DC3F4D1A",
-    },
-    {
-      id: 3,
-      name: "Ibrahima DIALLO",
-      location: "Togo",
-      image: "/testimonials/vertical.jpg",
-      testimonial:
-        "Comme je le dis à mes amis, Winichange est le site le plus utile pour gérer mes transactions depuis toujours !",
-      color: "#3d52a9",
-      bgColor: "#3d52a91d",
-    },
-    {
-      id: 4,
-      name: "Fatoumata KONE",
-      location: "Senegal",
-      image: "/testimonials/vertical.jpg",
-      testimonial:
-        "Je tiens à exprimer ma gratitude envers Winichange pour leur service exceptionnel et leur soutien précieux lors de la récupération de mes fonds.",
-      color: "#d19500",
-      bgColor: "#d195001d",
-    },
-];
-
 
   return (
     <div className='bg-black w-full'>
@@ -53,11 +14,11 @@ const Testimonials = () => {
           Nos clients satisfaits 
         </h2>
       </div>
-      <div className="mt-20 md:mt-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-20 md:mt-0 hidden md:grid md:grid-cols-2 gap-6">
         {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
-            className={`relative p-6 rounded-3xl shadow-lg border-2 bg-gray-200 mb-14 ${index % 2 ===0 ? 'md:mt-10': 'md:mb-16'}`}
+            className={`relative p-5 md:p-6 rounded-3xl shadow-lg border-2 bg-gray-200 mb-14 ${index % 2 ===0 ? 'md:mt-10': 'md:mb-16'}`}
 
             style={{
               borderColor: testimonial.color,
@@ -76,13 +37,13 @@ const Testimonials = () => {
             </div>
             <div className="mb-4">
               <h6
-                className="text-lg font-medium"
+                className="text-sm md:text-lg font-medium"
                 style={{ color: testimonial.color }}
               >
                 {testimonial.testimonial}
               </h6>
             </div>
-            <div className="text-sm flex">
+            <div className="text-[12px] md:text-sm flex">
               <p className="font-bold" style={{ color: testimonial.color }}>
                 {testimonial.name}
               </p>
@@ -94,6 +55,7 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+      <MobileTestimonialsComponent/>
        </div>
     </div>
   );

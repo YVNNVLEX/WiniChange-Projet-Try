@@ -9,6 +9,11 @@
 
 }
 
+
+.slick-dots li.slick-active div {
+  background-color: #126e51 !important;
+}
+
 footer a {
   text-decoration: none;
 
