@@ -16,7 +16,7 @@ export const Features = () => {
                 <p className="text-center mt-5 text-xl text-white/70">
                     Découvrez ce qui rend Winichange unique et pourquoi vous devriez nous faire confiance
                 </p>
-                <div className="mt-16 flex flex-col md:flex-row flex-wrap gap-4 justify-center">
+                <div className="mt-16 flex flex-col md:flex-row flex-wrap gap-8 md:gap-4 justify-center">
                     {features.map(({ title, description, icon }) => (
                         <Feature title={title} description={description} icon={icon} key={title} />
                     ))}
