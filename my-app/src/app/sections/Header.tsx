@@ -2,12 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
-import { TbExchange } from "react-icons/tb";
-import Logo from '@/app/assets/logo.png';
 import LogoDesktop from '@/app/assets/log1.png'
 import { IoMenu, IoClose } from "react-icons/io5";
 import { IoLogoAndroid, IoLogoApple } from "react-icons/io5";
-import { FaTelegram } from 'react-icons/fa';
 import LanguageSwitcher from '../utils/LanguageSwitcher';
 
 export const Header = () => {
@@ -71,7 +68,7 @@ export const Header = () => {
                         <LanguageSwitcher/>
                        </div>
                         <a href="#" className='rounded-xl bg-[#126e51] text-white px-4 py-2 text-sm'>Connexion</a>
-                        <button className="hidden md:inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Inscription</button>
+                        <a href="#" className="hidden md:inline-flex bg-gray-500 text-white px-4 py-2 rounded-xl text-sm">Inscription</a>
                         {isMenuOpen ? (
                           <IoClose onClick={toggleMenu} className={`h-7 w-7 text-[#126e51] lg:hidden cursor-pointer transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : 'rotate-0'}` }/>
                         ) : (
@@ -88,12 +85,12 @@ export const Header = () => {
                         <a href="#" >Blog</a>
                         <a href="#" >Devenir Partenaire</a>
                     </nav>
-                    <hr className='w-full border-b-1 border-gray-300 mt-4'/>
-                    <div className="flex items-center space-x-4 my-4">
-                        <a href="#" className='rounded-xl bg-black text-white px-4 py-2 text-sm'>Se connecter</a>
-                        <button className="inline-flex bg-black/60 text-white px-4 py-2 rounded-xl text-sm">Inscription</button>
+                    <hr className='w-full border-b-1 border-gray-300 mt-4 md:hidden'/>
+                    <div className="flex items-center space-x-4 my-4 md:hidden">
+                        <a href="#" className='rounded-xl bg-[#126e51] text-white px-4 py-2 text-sm'>Connexion</a>
+                        <a  href="#" className="inline-flex text-white px-4 py-2 rounded-xl text-sm bg-gray-500">Inscription</a>
                     </div>
-                    <div className='flex mt-3'>
+                    <div className='flex mt-3 md:hidden'>
                        <LanguageSwitcher/>
                     </div>
                 </div>
