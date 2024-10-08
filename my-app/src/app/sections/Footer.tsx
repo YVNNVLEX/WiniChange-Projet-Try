@@ -18,7 +18,7 @@ export default function Footer() {
               <div className="mb-4 mt-8">
                 <h5 className="text-xl text-white font-bold ">Contactez-Nous</h5>
                 <div className="mt-2 text-white/80">
-                  <a href="tel:+2250102528848" className="text-white flex items-center mb-4">
+                  <a href="tel:+2250749665503" className="text-white flex items-center mb-4">
                     <span className="mr-2">
                       <svg
                         width="17"
@@ -34,7 +34,7 @@ export default function Footer() {
                         />
                       </svg>
                     </span>
-                    +225 0102528848
+                    +225 0749665503
                   </a>
                   <a href="mailto:info@winichange.com" className="text-white flex items-center">
                     <span className="mr-2">
@@ -53,7 +53,7 @@ export default function Footer() {
                         />
                       </svg>
                     </span>
-                    info@izichange.com
+                    info@winichange.com
                   </a>
                 </div>
               </div>

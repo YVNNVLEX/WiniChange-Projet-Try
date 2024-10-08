@@ -10,6 +10,7 @@ import FloatingButtons from "./components/FloatingCompoAndGoUp";
 import SolutionsProposees from "./sections/NosSolutionsProposees";
 import TestimonialsSection from "./sections/Testimonialss";
 import SupportSection from "./sections/SupportSection";
+import BlogSection from "./sections/BlogSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
     <TestimonialsSection/>
     <SupportSection/>
     {/*<Faq/>*/}
+    <BlogSection/>
     <Footer />
    </>
   );
