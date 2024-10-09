@@ -2,7 +2,6 @@
 
 import Logo from '@/app/assets/logo.png'
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 
@@ -66,7 +65,7 @@ export default function Footer() {
                   <a href="#" >Accueil</a>
                 </li>
                 <li>
-                  <Link href="/a-propos" >À propos de Nous</Link>
+                  <a href="#" >À propos de Nous</a>
                 </li>
                 <li>
                   <a href="#" >FAQ</a>
