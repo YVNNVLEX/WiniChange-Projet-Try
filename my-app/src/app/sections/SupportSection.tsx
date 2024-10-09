@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link'
 import { FaRegQuestionCircle, FaComments, FaCircle } from 'react-icons/fa';
 import support from '@/app/assets/support/SVG/support.svg';
 import { useEffect, useState } from 'react';
@@ -89,7 +90,7 @@ const SupportSection = () => {
             Un service client à votre écoute, 24h/24 et 7j/7, parce que votre satisfaction est notre priorité !
           </h2>
           {supportOptions.map((option) => (
-            <a
+            <Link
               key={option.title}
               href={option.link}
               className="flex items-center p-6 bg-[#126e51] text-white rounded-lg shadow-md hover:bg-[#106047] transition-colors duration-300"
@@ -101,7 +102,7 @@ const SupportSection = () => {
                 <h3 className="text-lg font-semibold">{option.title}</h3>
                 <p className="mt-1 text-sm">{option.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
