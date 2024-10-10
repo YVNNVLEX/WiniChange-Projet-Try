@@ -12,8 +12,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between p-4 flex-wrap">
             <div className="flex flex-col items-start mb-8 space-y-2">
               <div className="w-full h-full mb-4 flex items-center md:justify-center">
-                <Image src={Logo.src} alt="Logo" width={30} height={30} className='cursor-pointer'/>
-                <h1 className='text-xl text-white font-bold mx-2'>WiniChange</h1>
+                <a href='/' className='flex'>
+                  <Image src={Logo.src} alt="Logo" width={30} height={30} className='cursor-pointer'/>
+                  <h1 className='text-xl text-white font-bold mx-2'>WiniChange</h1>
+                </a>
               </div>
               <div className="mb-4 mt-8">
                 <h5 className="text-xl text-white font-bold ">Contactez-Nous</h5>
@@ -62,7 +64,7 @@ export default function Footer() {
               <h5 className="text-xl text-white font-bold  mb-4">Liens Utiles</h5>
               <ul className="list-none space-y-2 text-white/60">
                 <li>
-                  <a href="#" >Accueil</a>
+                  <a href="#" >Nos services</a>
                 </li>
                 <li>
                   <a href="/aboutUs" >À propos de Nous</a>

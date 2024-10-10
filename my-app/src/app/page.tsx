@@ -19,7 +19,6 @@ export default function Home() {
     <Hero/>
     <LogoTickerSection/>
     <Features />
-    {/*<SolutionsProposees/>*/}
     <HowItWorks />
     <TestimonialsSection/>
     <SupportSection/>

@@ -14,7 +14,7 @@ import { RightCurve } from './Design/Collaboration';
 import { FaArrowRight } from 'react-icons/fa';
 
 const winichangeText = 
-  "Winichange est la solution idéale pour répondre à tous vos besoins de transfert d'argent. Nos moyens d'échange sont les suivants:";
+  "Winichange est la solution idéale pour répondre à tous vos besoins de transfert d'argent. Quelques uns de nos moyens d'echanges";
 
 const winichangeServices = [
   {
@@ -102,12 +102,12 @@ const SolutionsProposees = () => {
   return (
     <div
       id="#echange"
-      className="relative py-10 lg:py-24 xl:py-40 bg-black text-white"
+      className="relative py-24 lg:py-24 xl:py-40 bg-black text-white"
     >
       <div className="container lg:flex">
         <div className="flex items-center justify-center">
           <div className="lg:max-w-[25rem] max-w-full">
-            <h2 className="mb-8 md:mb-8 text-3xl md:text-5xl font-bold">
+            <h2 className="mb-8 md:mb-8 text-3xl md:text-4xl font-bold leading-9">
               Nos services que nous proposons
             </h2>
             <ul className="max-w-[22rem] mb-10">
@@ -115,7 +115,7 @@ const SolutionsProposees = () => {
                 <li className="mb-3 py-3" key={item.id}>
                   <div className="flex items-center">
                     <Image src={check} width={40} height={40} alt="Check icon" />
-                    <h6 className="body-2 ml-5">{item.title}</h6>
+                    <h6 className="ml-5 text-[16px] font-semibold">{item.title}</h6>
                   </div>
                   {item.text && (
                     <p className="text-sm text-white/60 pt-2 md:pt-4">{item.text}</p>
@@ -123,7 +123,7 @@ const SolutionsProposees = () => {
                 </li>
               ))}
             </ul>
-            <button className="bg-white text-black py-3 px-8 rounded-lg font-medium flex items-center">
+            <button className="bg-white hover:bg-white/80 text-black py-3 px-8 rounded-lg font-medium flex items-center">
               Je m'inscris
               <FaArrowRight className="ml-2" />
             </button>
@@ -135,7 +135,7 @@ const SolutionsProposees = () => {
             {winichangeText}
           </p>
 
-          <div className="relative left-1/2 flex w-[22rem] sm:w-[18rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 mt-20 md:mt-0">
+          <div className="relative left-1/2  flex w-[22rem] sm:w-[18rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 mt-20 md:mt-0">
             <div className="flex w-60 aspect-square m-auto border border-purple-400 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">

@@ -23,11 +23,13 @@ export const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}    
                             transition={{ duration: 1.2, ease: "easeOut" }}  
                         >
-                             Une expérience  d'interopérabilité et <br /> d'interconnexion  sans pareille
+                              Une expérience d'interopérabilité et d'interconnexion <br />
+                              sans pareille.
                         </motion.h1>
                     ) : (
                         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-center mt-4 inline-flex">
-                              Une expérience  d'interopérabilité et d'interconnexion <br /> sans pareille.
+                              Une expérience d'interopérabilité et d'interconnexion <br />
+                               sans pareille.
                         </h1>
                     )}
                      <motion.div
