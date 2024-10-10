@@ -12,7 +12,7 @@ const Apropos = () => {
   return (
     <>
       <Header />
-      <div className='py-24 h-full w-full'>
+      <div className='pt-24 md:py-24 h-full w-full'>
         <div className='container mx-auto px-5 lg:px-20 py-16 flex flex-col lg:flex-row-reverse items-center gap-12'>
           <div className='flex-1'>
             <Image
@@ -25,10 +25,10 @@ const Apropos = () => {
             />
           </div>
           <div className='flex-1 text-center lg:text-left space-y-5'>
-            <h1 className='text-[#126e51] text-5xl font-extrabold leading-tight'>
+            <h1 className='text-[#126e51] text-4xl lg:text-5xl font-extrabold leading-tight'>
               À Propos de <br /> WiniChange
             </h1>
-            <p className='text-gray-700 text-lg'>
+            <p className='text-black/80 text-sm md:text-lg'>
               Winichange est la plus grande plateforme d'achat et de vente de cryptomonnaies en Afrique.
               Notre vision est de promouvoir l'inclusion financière pour les populations africaines.
             </p>
@@ -43,7 +43,7 @@ const Apropos = () => {
           </div>
         </div>
         <div className='bg-[#126e51] h-1 w-3/4 mx-auto rounded-full my-10'></div>
-        <div className='container mx-auto px-5 lg:px-20 py-16 flex flex-col lg:flex-row items-center gap-12'>
+        <div className='container mx-auto px-5 lg:px-20 flex flex-col lg:flex-row items-center gap-12 py-16'>
           <div className='flex-1'>
             <Image
               src={photo4}
@@ -55,14 +55,14 @@ const Apropos = () => {
             />
           </div>
           <div className='flex-1 text-center lg:text-left space-y-5'>
-            <h1 className='text-[#126e51] text-5xl font-extrabold leading-tight'>
+            <h1 className='text-[#126e51] text-4xl md:text-5xl font-extrabold leading-tight'>
               Travailler <br /> chez WiniChange
             </h1>
-            <p className='text-gray-700 text-lg'>
+            <p className='text-black/80 text-sm md:text-lg'>
               Si vous êtes passionné par la finance et/ou la technologie numérique, et que vous avez des compétences dans ce domaine, 
               Winichange vous offre l'opportunité de rejoindre ses équipes et de participer à une belle aventure professionnelle et humaine.
             </p>
-            <p className='text-lg'>
+            <p className='text-sm md:text-lg'>
               Envoyez votre CV à : 
               <span className='text-[#126e51] underline ml-2 hover:text-green-800 transition'>
                 <a href="mailto:info@winichange.com">info@winichange.com</a>

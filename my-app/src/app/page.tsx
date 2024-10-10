@@ -4,7 +4,6 @@ import { Hero } from "./sections/Hero";
 import { LogoTickerSection } from "./sections/LogoTickerSection";
 import { Features } from "./sections/Features";
 import HowItWorks from "./sections/HowItWork";
-import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import FloatingButtons from "./components/FloatingCompoAndGoUp";
 import SolutionsProposees from "./sections/NosSolutionsProposees";

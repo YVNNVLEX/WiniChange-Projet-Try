@@ -68,10 +68,10 @@ const Faq = () => {
   return (
     <>
         <Header/>
-    <div className='text-[#2b2b2b] py-36  min-h-screen flex flex-col justify-center'>
+    <div className='text-[#2b2b2b] pt-40 pb-20 flex flex-col justify-center'>
       <div className='container mx-auto px-5 lg:px-20'>
         <h2 className='text-center
-         text-5xl md:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'>Questions frequemment posées</h2>
+         text-4xl lg:text-5xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'>Questions frequemment posées</h2>
         <div className='mt-12 max-w-[648px] mx-auto'>
           {items.map(({ questions, answers}) => (
             <AccordionItem key={questions}  questions={questions} answers={answers}/>
