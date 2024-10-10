@@ -105,26 +105,29 @@ export default function HowItWorks() {
               </motion.div>
             ))}
           </div>
-          <div className="flex justify-center p-4">
-            <motion.div
-              key={selectedContent?.id}
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 30 }}
-              transition={{ duration: 0.5 }}
-            >
-              {selectedContent && (
-                <Image
-                  src={selectedContent.image}
-                  alt={selectedContent.title}
-                  width={400}
-                  height={300}
-                  className="mb-4"
-                />
-              )}
-            </motion.div>
+          <div className="flex justify-center items-center p-4 relative">
+        <motion.div
+          key={selectedContent?.id}
+          className="flex flex-col items-center relative z-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="bg-gradient-to-r from-green-500 via-teal-500 to-green-400 rounded-full w-80 h-80 opacity-30 blur-lg"></div>
           </div>
+            {selectedContent && (
+              <Image
+                src={selectedContent.image}
+                alt={selectedContent.title}
+                width={400}
+                height={300}
+                className="mb-4"
+              />
+            )}
+          </motion.div>
+         </div>
         </div>
       </div>
     </div>
