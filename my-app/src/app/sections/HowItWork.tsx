@@ -49,7 +49,7 @@ export default function HowItWorks() {
   return (
     <div className="bg-black text-white py-12">
       <div className="container mx-auto px-4">
-        <h2 className="font-bold text-center mb-16 text-5xl md:text-6xl">Comment ça marche ?</h2>
+        <h2 className="font-bold text-center mb-16 text-3xl md:text-5xl">Comment ça marche ?</h2>
 
         {/* Mobile Section */}
         <div className="md:hidden mt-10 md:mt-20 flex flex-col items-center justify-center">

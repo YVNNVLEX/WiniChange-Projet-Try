@@ -34,7 +34,7 @@ const Faq = () => {
     return (
       <div className='cursor-pointer border-b border-black/60 py-7' onClick={() => setIsOpen(!isOpen)}>
       <div className='flex items-center'>
-        <span className='flex-1 text-lg font-bold'>{questions}</span>
+        <span className='flex-1 text-[16px] font-bold'>{questions}</span>
         {isOpen ? <FaMinus className='text-[#126e51]' /> : <FaPlus className='text-[#126e51]' />}
       </div>
       <AnimatePresence>
@@ -70,8 +70,7 @@ const Faq = () => {
         <Header/>
     <div className='text-[#2b2b2b] pt-40 pb-20 flex flex-col justify-center'>
       <div className='container mx-auto px-5 lg:px-20'>
-        <h2 className='text-center
-         text-4xl lg:text-5xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'>Questions frequemment posées</h2>
+        <h2 className='text-center text-3xl lg:text-4xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'>Questions frequemment posées</h2>
         <div className='mt-12 max-w-[648px] mx-auto'>
           {items.map(({ questions, answers}) => (
             <AccordionItem key={questions}  questions={questions} answers={answers}/>

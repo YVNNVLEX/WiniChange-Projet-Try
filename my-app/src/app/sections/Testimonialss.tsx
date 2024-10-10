@@ -10,7 +10,7 @@ const Testimonials = () => {
     <div className='bg-black w-full'>
         <div className="container mx-auto py-10">
       <div className="text-center md-14 md:mb-24">
-        <h2 className="text-5xl md:text-6xl font-bold text-white">
+        <h2 className="text-3xl md:text-5xl font-bold text-white">
           Nos clients satisfaits 
         </h2>
       </div>

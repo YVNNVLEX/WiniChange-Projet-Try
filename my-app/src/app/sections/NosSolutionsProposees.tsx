@@ -107,7 +107,7 @@ const SolutionsProposees = () => {
       <div className="container lg:flex">
         <div className="flex items-center justify-center">
           <div className="lg:max-w-[25rem] max-w-full">
-            <h2 className="h2 mb-8 md:mb-8 text-5xl md:text-6xl font-bold">
+            <h2 className="mb-8 md:mb-8 text-3xl md:text-5xl font-bold">
               Nos services que nous proposons
             </h2>
             <ul className="max-w-[22rem] mb-10">
