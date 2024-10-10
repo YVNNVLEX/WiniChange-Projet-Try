@@ -65,10 +65,10 @@ export default function Footer() {
                   <a href="#" >Accueil</a>
                 </li>
                 <li>
-                  <a href="#" >À propos de Nous</a>
+                  <a href="/aboutUs" >À propos de Nous</a>
                 </li>
                 <li>
-                  <a href="#" >FAQ</a>
+                  <a href="/faq" >FAQ</a>
                 </li>
                 <li>
                   <a href="#" >Blog</a>

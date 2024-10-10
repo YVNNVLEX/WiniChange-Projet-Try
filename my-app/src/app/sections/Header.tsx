@@ -54,11 +54,13 @@ export const Header = () => {
 
             <div className={ `md:container w-full  py-2 md:px-4  mt-2 font-semibold transition-colors duration-300 ${isScrolled ? 'bg-white bg-opacity-60 backdrop-blur-lg' : 'bg-gradient-to-l from-white to-green-200 bg-opacity-30 backdrop-blur-lg border-b border-white '} rounded-[1.8rem]`}>
                 <div className="mx-auto flex items-center justify-between px-4">
-                    <div className="flex items-center cur">
+                    <div className="flex items-center cursor-pointer">
+                        <a href="/">
                         <Image src={LogoDesktop} alt="mon_logo_desktop"  className="flex" height={190} width={190}  />
+                        </a>
                     </div>
                     <nav className="hidden lg:flex space-x-8">
-                        <a href="#" className="text-gray-800 hover:text-black transition duration-300">A propos</a>
+                        <a href="/aboutUs" className="text-gray-800 hover:text-black transition duration-300">A propos</a>
                         <a href="#" className="text-gray-800 hover:text-black transition duration-300">Services</a>
                         <a href="#" className="text-gray-800 hover:text-black transition duration-300">Blog</a>
                         <a href="#" className="text-gray-800 hover:text-black transition duration-300">Devenir partenaire</a>
@@ -80,7 +82,7 @@ export const Header = () => {
             {isMenuOpen && (
                 <div className="md:container md:px-10 my-2 py-5 rounded-[1.8rem] inset-0 bg-white font-semibold flex flex-col items-start px-4 justify-center lg:hidden">
                     <nav className="flex flex-col items-start space-y-4 text-gray-800 text-xl">
-                        <a href="#" >A propos</a>
+                        <a href="/aboutUs" >A propos</a>
                         <a href="#" >Services</a>
                         <a href="#" >Blog</a>
                         <a href="#" >Devenir Partenaire</a>
