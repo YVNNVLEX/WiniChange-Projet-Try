@@ -32,7 +32,7 @@ const Faq = () => {
   const AccordionItem = ({ questions, answers}:{questions: string, answers:string}) => {
     const [isOpen, setIsOpen ] = useState(false);
     return (
-      <div className='cursor-pointer border-b border-white/30 py-7' onClick={() => setIsOpen(!isOpen)}>
+      <div className='cursor-pointer border-b border-black/60 py-7' onClick={() => setIsOpen(!isOpen)}>
       <div className='flex items-center'>
         <span className='flex-1 text-lg font-bold'>{questions}</span>
         {isOpen ? <FaMinus className='text-[#126e51]' /> : <FaPlus className='text-[#126e51]' />}
