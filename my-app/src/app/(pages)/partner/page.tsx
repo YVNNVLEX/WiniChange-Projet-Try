@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from "next/image"
+import walletSky from "@/app/assets/wallsky.png"
 import { twMerge } from 'tailwind-merge'
 import partner from "@/app/assets/servPhotos.webp"
 import crypPart from "@/app/assets/crypPart.webp"
@@ -9,6 +10,7 @@ import { Header } from "@/app/sections/Header"
 import Footer from "@/app/sections/Footer"
 
 const Partner = () => {
+  const walletSky = "/wallsky.png"
 
   const becomePartner = [
     {
@@ -39,7 +41,7 @@ const Partner = () => {
   const Advantages = [
     {
       id:1,
-      icons: "1",
+      images: "/walletsky",
       title: "Être propriétaire d'une entreprise ",
       text:"officiellement enregistrée.",
       color:"red"
@@ -122,8 +124,8 @@ const Partner = () => {
                 </div>
             </div>
             <div className='flex flex-col items-center align-center'>
-                <h1 className='font-bold text-sm'>Les Avantages d'être Partenaire Winichange</h1>
-                <div className='flex flex-col gap-5'>
+                <h1 className='font-bold text-lg text-center'>Avantages du partenariat WinChange</h1>
+                {/* <div className='flex flex-col gap-5'>
                 {
                       Advantages.map(items => (
                         <div key={items.id} className={
@@ -133,16 +135,29 @@ const Partner = () => {
                                 green: 'bg-green-100',
                           }[items.color] || 'bg-gray-100', "p-2 rounded-lg")
                         }>
-                            <Image
-                            src={items.icons}
-                            height={50}
-                            width={50}
-                            alt="icons"
-                            className=''
-                            />
+                            
                         </div>
                       ))
                   }
+                </div> */}
+                <div className=''>
+                    {
+                      Advantages.map(items =>(
+                        <div className='flex flex-col gap-3'>
+                            <div className='w-[70px] h-[70px] p-2 rounded-full bg-green-400'>
+                              <Image
+                              src={items.icons}
+                              width={400}
+                              height={400}
+                              alt="PartnerSmile"
+                              className='max-w-[50px] -translate-x-2 translate-y-5'
+                              />
+                            </div>
+                            <h5 className='text-lg font-bold'>Meilleurs taux</h5>
+                            <p>Obtenez un taux des plus avantageux sur vos transactions</p>
+                        </div>
+                      ))
+                    }
                 </div>
             </div>
             <div>
