@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from "next/image"
+import { motion } from "framer-motion"
 import walletSky from "@/app/assets/wallsky.png"
 import { twMerge } from 'tailwind-merge'
 import partner from "@/app/assets/servPhotos.png"
@@ -13,7 +14,26 @@ import { Header } from "@/app/sections/Header"
 import Footer from "@/app/sections/Footer"
 
 const Partner = () => {
-  // const walletSky = "/wallsky.png"
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.5 * i,
+      },
+    }),
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+  
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+  };
 
   const becomePartner1 = [
     {
@@ -55,7 +75,7 @@ const Partner = () => {
       id:2,
       images: secured,
       title: "Nombreuses transactions",
-      text:"Effectuez des transactions volumineuses en une seule fois",
+      text:"Effectuez des transactions volumineuses en une seule fois et de manière sécurisée",
       color:"blue"
     },
     {
@@ -100,7 +120,7 @@ const Partner = () => {
             </div>
             <div className='flex flex-col items-center align-center'>
                 <h1 className='font-bold text-sm md:text-3xl'>Condition Pour Devenir Un Partenaire</h1>
-                <div>
+                {/* <div>
                   <div className='flex flex-col gap-5 md:flex-row items-center align-center'>
                       <Image
                       src={crypPart}
@@ -158,37 +178,143 @@ const Partner = () => {
                         }
                       </div>
                   </div>
+                </div> */}
+                <div>
+                <div className='flex flex-col gap-5 md:flex-row items-center'>
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                      variants={imageVariants}
+                      className="md:order-first"  // Classe pour changer l'ordre
+                    >
+                      <Image
+                        src={crypPart}
+                        width={400}
+                        height={400}
+                        alt="PartnerSmile"
+                        className='max-w-[400px] ml-10'
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                      variants={containerVariants}
+                    >
+                      <div>
+                        {becomePartner1.map((items, index) => (
+                          <motion.div
+                            key={items.id}
+                            custom={index}
+                            variants={itemVariants}
+                            className={twMerge(
+                              {
+                                blue: 'bg-blue-300',
+                                indigo: 'bg-indigo-300',
+                                green: 'bg-green-300',
+                              }[items.color] || 'bg-gray-300',
+                              'p-2 rounded-lg mt-5 max-w-[350px]'
+                            )}
+                          >
+                            <h1
+                              className={twMerge(
+                                {
+                                  blue: 'text-blue-800',
+                                  indigo: 'text-indigo-800',
+                                  green: 'text-green-800',
+                                }[items.color] || 'text-gray-800',
+                                'text-lg font-bold mb-2'
+                              )}
+                            >
+                              {items.id}
+                            </h1>
+                            <p className='ml-5'>
+                              {items.text} <span className='font-bold'>{items.specialText}</span>
+                            </p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                      variants={containerVariants}
+                    >
+                      <div>
+                        {becomePartner2.map((items, index) => (
+                          <motion.div
+                            key={items.id}
+                            custom={index}
+                            variants={itemVariants}
+                            className={twMerge(
+                              {
+                                blue: 'bg-blue-300',
+                                indigo: 'bg-indigo-300',
+                                green: 'bg-green-300',
+                              }[items.color] || 'bg-gray-300',
+                              'p-2 rounded-lg mt-5 max-w-[350px]'
+                            )}
+                          >
+                            <h1
+                              className={twMerge(
+                                {
+                                  blue: 'text-blue-800',
+                                  indigo: 'text-indigo-800',
+                                  green: 'text-green-800',
+                                }[items.color] || 'text-gray-800',
+                                'text-lg font-bold mb-2'
+                              )}
+                            >
+                              {items.id}
+                            </h1>
+                            <p className='ml-5'>
+                              {items.text} <span className='font-bold'>{items.specialText}</span>
+                            </p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
                 </div>
+            </div>
             </div>
             <div className='flex flex-col items-center align-center'>
                 <h1 className='font-bold text-sm md:text-3xl'>Avantages du partenariat WinChange</h1>
-                <div className='flex flex-col gap-5 my-10 md:flex-row'>
-                    {
-                      Advantages.map(items =>(
-                        <div className='flex flex-col'>
-                            {/* <div className='center w-[70px] h-[70px] p-2 rounded-full bg-green-400'> */}
-                            <div className={
-                              twMerge({
-                                blue: 'bg-blue-400',
-                                  indigo: 'bg-indigo-400',
-                                  green: 'bg-green-400',
-                            }[items.color] || 'bg-green-400', "p-2 center w-[70px] h-[70px] rounded-full")
-                            }>
-                              <Image
-                              src={items.images}
-                              width={400}
-                              height={400}
-                              alt="PartnerSmile"
-                              className='max-w-[50px] translate-y-1'
-                              />
-                            </div>
-                            <div className='mt-5'>
-                              <h5 className='text-lg font-bold'>{items.title}</h5>
-                              <p>{items.text}</p>
-                            </div>
+                <div className='flex flex-col gap-5 my-10 md:flex-row md:ml-40'>
+                  {
+                    Advantages.map((items, index) => (
+                      <motion.div
+                        key={items.id}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }} // Le conteneur sera révélé lorsque 20% est visible
+                        custom={index} // Passer l'index pour le délai
+                        variants={itemVariants} // Appliquer les variantes
+                        className='flex flex-col'
+                      >
+                        <div className={twMerge(
+                          {
+                            blue: 'bg-blue-400',
+                            indigo: 'bg-indigo-400',
+                            green: 'bg-green-400',
+                          }[items.color] || 'bg-green-400', "p-2 center w-[70px] h-[70px] rounded-full"
+                        )}>
+                          <Image
+                            src={items.images}
+                            width={400}
+                            height={400}
+                            alt="PartnerSmile"
+                            className='translate-y-1'
+                          />
                         </div>
-                      ))
-                    }
+                        <div className='mt-5 max-w-[350px]'>
+                          <h5 className='text-lg font-bold'>{items.title}</h5>
+                          <p>{items.text}</p>
+                        </div>
+                      </motion.div>
+                    ))
+                  }
                 </div>
             </div>
             <div className='lg:flex'>
