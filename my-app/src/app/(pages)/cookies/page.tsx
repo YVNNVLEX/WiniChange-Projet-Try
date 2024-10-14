@@ -17,19 +17,19 @@ const GeneralConditions = () => {
         },
         {
           title: "Comment utilisons nous les cookies ?", 
-          text:"Nous utilisons des cookies pour diverses raisons, détaillées ci-dessous. Malheureusement, dans la plupart des cas, il n'existe pas d'option standard pour désactiver les cookies sans désactiver complètement les fonctionnalités et services ajoutés à ce site. Il est recommandé de laisser tous les cookies activés si vous n'êtes pas certain de leur nécessité, car ils peuvent être essentiels à la fourniture de services en cours d'exécution.",
+          text:"Nous intégrons des cookies pour diverses raisons essentielles, comme expliqué ci-dessous. Malheureusement, il n'existe souvent pas d'option standard pour désactiver les cookies sans compromettre les fonctionnalités et services que nous proposons sur ce site. Nous vous conseillons de garder tous les cookies activés si vous n'êtes pas sûr de leur nécessité, car ils sont souvent indispensables à la continuité de nos services.",
         },
         {
           title: "Vous souhaitez désactiver les Cookies", 
-          text:"Vous pouvez empêcher l'activation des cookies en ajustant les paramètres de votre navigateur (consultez le fichier d'aide de votre navigateur pour des instructions). Veuillez noter que la désactivation des cookies affectera la fonctionnalité de ce site ainsi que de nombreux autres sites que vous visitez. Il est donc conseillé de ne pas désactiver les cookies.",
+          text:"Si vous préférez empêcher l’activation des cookies, vous pouvez le faire en ajustant les paramètres de votre navigateur (référez-vous à la documentation d'aide de votre navigateur pour des instructions précises). Toutefois, veuillez garder à l'esprit que désactiver les cookies pourrait nuire à la fonctionnalité de notre site ainsi que de nombreux autres sites que vous visitez. Il est donc recommandé de ne pas désactiver les cookies.",
         },
         {
           title: "Cookies Tiers", 
-          text:"Dans certains cas, nous utilisons également des cookies fournis par des tiers de confiance. La section suivante détaille les cookies tiers que vous pourriez rencontrer sur ce site. Nous utilisons Google Analytics, l'une des solutions d'analyse les plus répandues et fiables sur le web, pour nous aider à comprendre comment vous utilisez le site et comment nous pouvons améliorer votre expérience. Ces cookies peuvent suivre des éléments tels que la durée de votre visite sur le site et les pages que vous consultez, afin que nous puissions continuer à produire un contenu engageant. Pour plus d'informations sur les cookies de Google Analytics, consultez la page officielle de Google Analytics. Nous intégrons également des boutons et des plugins de médias sociaux sur ce site, qui vous permettent de vous connecter à vos réseaux sociaux de différentes manières. Pour permettre au site de se connecter à des plateformes telles que Twitter ou Facebook, nous utilisons des cookies qui peuvent être utilisés pour enrichir votre profil sur leur site ou contribuer aux données qu'ils détiennent pour divers objectifs définis dans leurs politiques de confidentialité respectives",
+          text:"Dans certains cas, nous collaborons avec des tiers de confiance qui utilisent également des cookies. La section suivante fournit des détails sur les cookies de tiers que vous pourriez rencontrer sur notre site. Nous utilisons Google Analytics, une des solutions d'analyse les plus reconnues et fiables sur le web, pour mieux comprendre comment vous interagissez avec notre site et pour optimiser votre expérience. Ces cookies peuvent suivre des données telles que la durée de votre visite et les pages que vous consultez, nous permettant ainsi de créer un contenu toujours plus engageant. Pour plus d'informations sur les cookies de Google Analytics, consultez la page officielle de Google Analytics.Nous intégrons également des boutons et des plugins de réseaux sociaux qui vous permettent de vous connecter facilement à vos plateformes sociales. Pour faciliter cette connexion avec des réseaux tels que Twitter et Facebook, nous utilisons des cookies qui peuvent enrichir votre profil sur leurs sites et contribuer aux données qu'ils détiennent, conformément à leurs politiques de confidentialité respectives.",
         },
         {
-          title: "Qu'est-ce que Winichange ?", 
-          text:"Nous espérons que cela a clarifié les choses pour vous. Comme mentionné précédemment, si vous n'êtes pas certain de la nécessité d'activer ou non les cookies, il est généralement plus prudent de les laisser activés, car ils peuvent interagir avec certaines fonctionnalités que vous utilisez sur notre site. Toutefois, si vous souhaitez obtenir de plus amples informations, vous pouvez nous contacter à l'adresse suivante : ",
+          title: "En savoir plus sur WiniChange", 
+          text:"Nous espérons que ces informations vous ont éclairé. Comme mentionné précédemment, si vous hésitez quant à l'activation des cookies, il est généralement plus prudent de les laisser activés, car ils peuvent interagir avec certaines fonctionnalités essentielles de notre site. Si vous souhaitez obtenir des informations supplémentaires, n'hésitez pas à nous contacter à l'adresse suivante :",
         },
       ]
 
@@ -41,13 +41,7 @@ const GeneralConditions = () => {
               <span className='font-semibold text-[#126e51] bg-white py-0.5 px-2'>COOKIES</span>
           </h1>
       </div>
-      <div className='flex items-center justify-center'>
-        <div className='w-full'>
-            <a href="" className='rounded-2 p-4 '>
-              C'est Quoi un Cookies
-            </a>
-        </div>
-        <div className='pt-10 md:py-24 h-full w-full grow'>
+      <div className='container pt-10 md:py-24 h-full w-full grow'>
           <div className='mx-auto px-5 lg:px-20 py-10 '>
               <h1 className='font-bold text-green-800 text-3xl'>Winichange Cookies</h1>
               {
@@ -65,10 +59,9 @@ const GeneralConditions = () => {
                       </div>
                   ))
               }
-              <a href='mailto:recrutement@winichange.com' className='text-blue-700'>info@izichange.com.</a>
+              <a href='mailto:recrutement@winichange.com' className='text-blue-700'>recrutement@winichange.com</a>
           </div>
         </div>
-      </div>
       <Footer />
     </>
   )
