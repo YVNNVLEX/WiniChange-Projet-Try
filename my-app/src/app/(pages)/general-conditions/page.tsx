@@ -67,11 +67,15 @@ const GeneralConditions = () => {
   return (
     <>
       <Header />
+      <div className=''>
+          <h1 className='bg-gradient-to-tl from-[#126e51]  to-black min-h-56 py-56 text-white text-3xl text-center '>
+            <span className='font-semibold text-[#126e51] bg-white py-0.5 px-2'>TERMES, <br /> CONDITION D'UTILSATION & POLITIQUE DE CONFIDENTIALITES</span>
+          </h1>
+      </div>
       <div className='pt-10 md:py-20 h-full w-full'>
         <div className='container mx-auto px-5 lg:px-20 py-10 '>
             <div className='flex flex-col gap-12'>
                 <div>
-                    <h1 className='font-bold text-2xl text-green-800'>Termes, Conditions d'utilisation et police de confidentialité</h1>
                     <p className='mt-5'>
                         Les conditions générales d'utilisation de ce site web sont structurées en plusieurs sections.
                         Avant d'accepter ces conditions, il est impératif de prendre connaissance des sections suivantes

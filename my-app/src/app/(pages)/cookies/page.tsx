@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from "next/image"
 import { useState } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { BiCookie } from "react-icons/bi";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from "@/app/sections/Header"
 import Footer from "@/app/sections/Footer"
@@ -13,7 +13,7 @@ const GeneralConditions = () => {
     const cookies = [
         {
             title: "C'est quoi un Cookies ?", 
-            text:"Comme la plupart des sites professionnels, ce site utilise des cookies, qui sont de petits fichiers téléchargés sur votre ordinateur pour améliorer votre expérience utilisateur. Cette page décrit quelles informations nous collectons, comment nous les utilisons et pourquoi nous avons parfois besoin de les stocker. Nous expliquerons également comment vous pouvez empêcher le stockage de ces cookies, bien que cela puisse nuire à certaines fonctionnalités du site. Pour des informations générales sur les cookies, veuillez consulter l'article Wikipedia sur les cookies HTTP.",
+            text:"Les cookies sont de petits fichiers d'information qu'un serveur web génère et envoie à un navigateur web. Les navigateurs stockent les cookies qu'ils reçoivent pour une période prédéterminée ou pour la durée de la session d'un utilisateur sur un site web. Ils joignent les cookies pertinents à toutes les futures requêtes que l'utilisateur fait au serveur web. Les cookies permettent aux sites web de recueillir des informations sur l'utilisateur, ce qui permet de personnaliser l'expérience utilisateur. Par exemple, les sites d'e-commerce utilisent des cookies pour savoir quels articles les utilisateurs ont ajoutés à leurs paniers. De plus, certains cookies sont nécessaires à des fins de sécurité, comme les cookies d'authentification (voir ci-dessous). Les cookies utilisés sur Internet sont également appelés cookies HTTP. Comme une grande partie du web, les cookies sont envoyés via le protocole HTTP.",
         },
         {
           title: "Comment utilisons nous les cookies ?", 
@@ -36,25 +36,37 @@ const GeneralConditions = () => {
   return (
     <>
       <Header />
-      <div className='pt-10 md:py-24 h-full w-full'>
-        <div className='container mx-auto px-5 lg:px-20 py-10 '>
-            <h1 className='font-bold text-green-800 text-3xl'>Winichange Cookies</h1>
-            {
-                cookies.map(items=>(
-                    <div className='mt-10' key={cookies.indexOf(items)}>
-                        <div className='flex '>
-                            <h1 className='font-semibold'>
-                                <span className='mr-2'>{cookies.indexOf(items)+1}.</span>
-                                {items.title}
-                            </h1>
-                        </div>
-                        <p className='mt-2'>
-                            {items.text}
-                        </p>
-                    </div>
-                ))
-            }
-            <a href='mailto:recrutement@winichange.com' className='text-blue-700'>info@izichange.com.</a>
+      <div>
+          <h1 className='bg-gradient-to-tl from-[#126e51]  to-black min-h-56 py-56 text-white text-[70px] text-center overflow-hidden'>
+              <span className='font-semibold text-[#126e51] bg-white py-0.5 px-2'>COOKIES</span>
+          </h1>
+      </div>
+      <div className='flex items-center justify-center'>
+        <div className='w-full'>
+            <a href="" className='rounded-2 p-4 '>
+              C'est Quoi un Cookies
+            </a>
+        </div>
+        <div className='pt-10 md:py-24 h-full w-full grow'>
+          <div className='mx-auto px-5 lg:px-20 py-10 '>
+              <h1 className='font-bold text-green-800 text-3xl'>Winichange Cookies</h1>
+              {
+                  cookies.map(items=>(
+                      <div className='mt-10' key={cookies.indexOf(items)}>
+                          <div className='flex '>
+                              <h1 className='font-semibold'>
+                                  <span className='mr-2'>{cookies.indexOf(items)+1}.</span>
+                                  {items.title}
+                              </h1>
+                          </div>
+                          <p className='mt-2'>
+                              {items.text}
+                          </p>
+                      </div>
+                  ))
+              }
+              <a href='mailto:recrutement@winichange.com' className='text-blue-700'>info@izichange.com.</a>
+          </div>
         </div>
       </div>
       <Footer />
