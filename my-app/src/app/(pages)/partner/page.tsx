@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import walletSky from "@/app/assets/wallsky.png"
 import { FaArrowRightLong } from "react-icons/fa6";
 import Logo from '@/app/assets/logo.png';
+import Cookies  from "@/app/components/cookies"
 import { twMerge } from 'tailwind-merge'
 import partner from "@/app/assets/p2.png"
 import crypPart from "@/app/assets/p4.jpg"
