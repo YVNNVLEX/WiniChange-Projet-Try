@@ -27,7 +27,24 @@ const config: Config = {
       stroke: {
         1: "#26242C",
       },
-      
+      animation: {
+        'rotate-opposite': 'rotate-opposite 30s linear infinite',
+        'rotate-infinity': 'rotate-infinity 30s linear infinite',
+      },
+      keyframes: {
+        'rotate-opposite': {
+          '0%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(-90deg)' },
+          '50%': { transform: 'rotate(-180deg)' },
+          '75%': { transform: 'rotate(-270deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+        'rotate-infinity': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
+    
     },
   },
   plugins: [],

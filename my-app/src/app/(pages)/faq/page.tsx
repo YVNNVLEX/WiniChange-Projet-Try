@@ -5,6 +5,8 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Header } from '@/app/sections/Header';
+import Footer from '@/app/sections/Footer';
 
 
 const Faq = () => {
@@ -30,10 +32,10 @@ const Faq = () => {
   const AccordionItem = ({ questions, answers}:{questions: string, answers:string}) => {
     const [isOpen, setIsOpen ] = useState(false);
     return (
-      <div className='cursor-pointer border-b border-white/30 py-7' onClick={() => setIsOpen(!isOpen)}>
+      <div className='cursor-pointer border-b border-black/60 py-7' onClick={() => setIsOpen(!isOpen)}>
       <div className='flex items-center'>
-        <span className='flex-1 text-lg font-bold'>{questions}</span>
-        {isOpen ? <FaMinus/> : <FaPlus/> }
+        <span className='flex-1 text-[16px] font-bold'>{questions}</span>
+        {isOpen ? <FaMinus className='text-[#126e51]' /> : <FaPlus className='text-[#126e51]' />}
       </div>
       <AnimatePresence>
         {isOpen && (
@@ -64,10 +66,11 @@ const Faq = () => {
 
 
   return (
-    <div className='bg-black text-white bg-gradient-to-b from-[rgba(31,198,109,0.272)]  to-black py-[72px] sm:py-24'>
-      <div className='container'>
-        <h2 className='text-center
-         text-5xl md:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'>Questions frequemment posées</h2>
+    <>
+        <Header/>
+    <div className='text-[#2b2b2b] pt-40 pb-20 flex flex-col justify-center'>
+      <div className='container mx-auto px-5 lg:px-20'>
+        <h2 className='text-center text-3xl lg:text-4xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'>Questions frequemment posées</h2>
         <div className='mt-12 max-w-[648px] mx-auto'>
           {items.map(({ questions, answers}) => (
             <AccordionItem key={questions}  questions={questions} answers={answers}/>
@@ -75,6 +78,8 @@ const Faq = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

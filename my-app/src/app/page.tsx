@@ -4,13 +4,13 @@ import { Hero } from "./sections/Hero";
 import { LogoTickerSection } from "./sections/LogoTickerSection";
 import { Features } from "./sections/Features";
 import HowItWorks from "./sections/HowItWork";
-import Faq from "./sections/Faq";
 import Footer from "./sections/Footer";
 import FloatingButtons from "./components/FloatingCompoAndGoUp";
 import SolutionsProposees from "./sections/NosSolutionsProposees";
 import TestimonialsSection from "./sections/Testimonialss";
 import SupportSection from "./sections/SupportSection";
 import BlogSection from "./sections/BlogSection";
+import NosMoyensDePaiement from "./sections/NosMoyensDePaiement";
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
     <Header/>
     <Hero/>
     <LogoTickerSection/>
+    <NosMoyensDePaiement/>
     <Features />
-    {/*<SolutionsProposees/>*/}
     <HowItWorks />
     <TestimonialsSection/>
     <SupportSection/>
